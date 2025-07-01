@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="libabry_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7930fa7e-165b-415c-a767-661f38c65e1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="librarySystem"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM returnbook]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="returnbook"/>
+	</field>
+	<field name="BookName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BookName"/>
+		<property name="com.jaspersoft.studio.field.label" value="BookName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="returnbook"/>
+	</field>
+	<field name="BDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="BDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="BDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="returnbook"/>
+	</field>
+	<field name="Breturn" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="Breturn"/>
+		<property name="com.jaspersoft.studio.field.label" value="Breturn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="returnbook"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="10" width="260" height="59" uuid="f0578a85-a9ba-4701-863e-476918c10293"/>
+				<textElement>
+					<font size="29"/>
+				</textElement>
+				<text><![CDATA[Library System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="20" width="100" height="30" uuid="a1235dbc-2c70-4640-afc9-0ea30ecc1b27"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Return Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="20" width="100" height="30" uuid="4a337132-7c35-4187-af52-13cacfa2881a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Book Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="20" width="100" height="30" uuid="4dd44e09-e1c3-48b9-a874-1fa04c3c073f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="20" width="100" height="30" uuid="df72e5e4-2e73-4c60-99e9-c16249dcede9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Return date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-30" y="62" width="605" height="1" uuid="df858a09-830c-495c-a100-83493b54dca4"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="10" width="100" height="30" uuid="7533402b-ff31-4c7a-944b-98159151298e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="10" width="100" height="30" uuid="2e4e6450-bb39-4b0e-8747-df71429e5a5b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BookName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="100" height="30" uuid="21b66713-1cf9-4276-8730-cef08fcfdf00"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="10" width="100" height="30" uuid="c973cd51-5784-4471-91ab-db920c6f6999"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Breturn}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
